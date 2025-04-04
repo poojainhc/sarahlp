@@ -16,6 +16,86 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style-starter.css">
     <style>
+          
+          #about{
+             background-color:var(--bg-lightgrey) ;
+          }
+        .start_heding{
+           margin-top:20px!important ;
+        }
+        
+        .start_heding span{
+            color:orangered ;
+            
+        }
+
+        .about_info {
+            
+            text-align: center;
+            margin: 30px;
+        }
+        .about_info h4 {
+            color:orangered!important;
+            text-align: center;
+            margin: 30px;
+        }
+
+        .info-banner{
+            display: flex;
+            gap: 20px;
+            text-align: center;
+            margin-left: 250px;
+        }
+       /* Banner Section */
+.slide-2 {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Adjust as needed */
+    overflow: hidden; /* Prevents video from exceeding banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Video Container to Control Size */
+.banner-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Sends video to background */
+}
+
+/* Background Video Styling */
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers only the banner */
+}
+
+/* Optional Dark Overlay */
+.video-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 0;
+}
+
+/* Content Styling */
+.banner-content {
+    position: relative;
+    z-index: 1; /* Ensures text appears over video */
+    color: white;
+}
+
+
         
         .title-main span{
           color: #ff6b6b;
@@ -74,6 +154,9 @@
         border-radius: 10px;
         background: #f8f9fa; /* Light background for better readability */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+    .grids_info li span{
+
     }
     .detail h4 {
         margin-bottom: 5px;
@@ -185,7 +268,7 @@
         .title-style {
             color: var(--text-color);
             position: relative;
-            padding-bottom: 15px;
+            
         }
 
         .title-style:after {
@@ -265,10 +348,11 @@
         }
 
         .bottom-block {
-            background: #fff;
+            background: #fff !important;
             border: 2px solid var(--primary-color);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px var(--shadow-color);
+/*            transition: all 0.3s ease out !important;*/
+            transition: transform 0.3s linear;
+            box-shadow: 0 4px 15px var(----primary-color)!important;
         }
 
       /*  .bottom-block:hover {
@@ -294,8 +378,8 @@
             box-shadow: 0 8px 25px var(--shadow-color);
         }*/
 
-        .grids_info .detail h4 {
-            color: var(--text-color);
+        .grids_info h4 {
+            color: var(--primary-color);
         }
 
         .grids_info .detail p {
@@ -356,33 +440,27 @@
         }
 
         .banner-content h3 {
-            color: var(--text-color);
+            color: #fff;
             position: relative;
             padding-bottom: 15px;
         }
         .banner-content h3 {
         font-size: 58px !important;
         line-height: 67px!important;
-        font-family: castora, serif !important;
+      font-family: 'open sans', "sans-serif" !important;
         font-style: italic;
         font-weight: 800!important;
+        text-shadow: 2px 2px 6px black;
     }
 
 
-        .banner-content h3:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 80px;
-            height: 3px;
-            background: var(--gradient-primary);
-        }
+       
 
         h3.title-style {
-    font-size: 35px!important;
-    line-height: 40px!important;
-}
+                font-size: 31px!important;
+                line-height: 35px!important;
+            }
+
         .banner-content h4{
             font-size: 35px;
             font-family: castora, serif !important;
@@ -390,12 +468,12 @@
             font-weight: 700!important;
             margin-top: 50px !important;
             margin-bottom: 70px;
-            text-shadow: 2px 2px 6px white;
+            
          }
          .banner-content h4 span{
             text-shadow: 2px 2px 6px black;
-            color:#fff !important;
-            font-size: 35px;
+            color:orangered !important;
+            font-size: 40px;
          }
 
          .banner-content h5{
@@ -559,8 +637,8 @@
    
 
     <!-- banner section -->
-    <div class="slideshow">
-        <div class="holder">
+    <div class="">
+        <div class="">
             <!-- <div class="slide slide-1">
                 <span class="container">
                     <span class="banner-content">
@@ -573,26 +651,37 @@
                     </span>
                 </span>
             </div> -->
-            <div class="slide slide-2">
-                <span class="container">
-                    <span class="banner-content">
-                            <video autoplay loop muted playsinline class="banner-video">
-                                <source src="tour.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>                       
-                         <h3 class="mb-2">Tired of Working for Someone Else?<br>
-                        Get Paid to Plan Travel!</h3>
-                        <h4 style="color:#000000;">Turn your love for travel into a <span><i>Profitable</i></span> <br>business for just <span><i><b>$200</b>!</i></span>
-                        </h4>
-                        <h5><i>No experience needed</i></h5>
-                        <h5><i>No contracts</i></h5>
-                        <h5><i>Work on your terms</i></h5>
-                        <a class="btn btn-style mt-sm-5 mt-4" href="">Claim Your Spot Now </a>
-                        
-                       
-                    </span>
-                </span>
+           <div class="slide slide-2">
+    <!-- Background Video -->
+    <div class="banner-video-container">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="assets/images/occen_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Content Overlay -->
+    <span class="container">
+        <span class="banner-content">
+            <h3 class="mb-2">Tired of Working for Someone Else?<br>
+                Get Paid to Plan Travel!
+            </h3>
+            <h4>
+                Turn your love for travel into a <span><i>Profitable</i></span> <br>
+                business for just <span><i><b>$200</b>!</i></span>
+            </h4>
+            <div class="info-banner">
+                <h5><i>No experience needed</i></h5>
+                <h5><i>No contracts</i></h5>
+                <h5><i>Work on your terms</i></h5>
             </div>
+            
+            <a class="btn btn-style mt-sm-5 mt-4" href="#">Claim Your Spot Now</a>
+        </span>
+    </span>
+</div>
+
+
             <!-- <div class="slide slide-3">
                 <span class="container">
                     <span class="banner-content">
@@ -607,9 +696,7 @@
             </div> -->
             
         </div>
-        <div class="steps"></div>
-        <a href="#" class="prev"><i class="fas fa-arrow-left"></i></a>
-        <a href="#" class="next"><i class="fas fa-arrow-right"></i></a>
+        
     </div>
     <!-- //banner section -->
 
@@ -671,11 +758,15 @@
     </section> -->
     <!-- //booking form section -->
 
+
     <!-- about section -->
-    <section class="w3l-aboutblock py-lg-5 py-4" id="about"> 
+    <section class="w3l-aboutblock py-lg-5 py-4" id="about" style="background-color: var(--bg-lightgrey);">
+        <div class="about_info"><h4>"Stuck in a Job You Hate? It’s Time for a Change!"</h4></div>
+          
         <div class="container">
+            <h5>Watch this short video to see how this works!</h5>
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-7">
                     <div class="video-container" style="position: relative; padding-bottom: 75%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                         <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
                             src="https://www.youtube.com/embed/IWKqlbX81cU" 
@@ -686,7 +777,7 @@
                         </iframe>
                     </div>
                 </div>
-                <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
+                <div class="col-lg-5 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
                     <div class="title-main">
                         
                         <h3 class="title-style">If you're ready to escape the 9-5 and build something for yourself, this is for you!
@@ -723,10 +814,9 @@
                 
                 <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
                     <div class="title-main mb-4" style="max-width:600px;">
-                        <p style="font-weight: 600;"><i>The Solution</i></p>
+                        
                         <h3 class="title-style"><span style="color:#000000!important">Turn Your Passion for Travel Into a Profitable Business</span></h3>
-                        <h4>Start today and <span> book </span> your <span> first trip</span> in just weeks!
-                                </h4>
+                        
                     </div>
                     
                     <div class="two-grids">
@@ -735,20 +825,20 @@
                             <div class="">
                                 <h4> When You Join, You'll Get:</h4>
                           <ul>
-                            <li style="color: #000000 !important; font-size: 18px;">
-                                ✔ Step-by-step training – No guesswork, just clear action steps
+                            <li style="color: #000000 !important; font-size: 16px;">
+                                ✔<span style="font-size: 17px"><b> Step-by-step training</b></span> – No guesswork, just clear action steps
                             </li>
-                            <li style="color: #000000 !important; font-size: 18px;">
-                                ✔ A complete travel booking system – No need to start from scratch
+                            <li style="color: #000000 !important; font-size: 16px;">
+                                ✔<span style="font-size: 17px"><b>A complete travel booking system</b></span> – No need to start from scratch
                             </li>
-                            <li style="color: #000000 !important; font-size: 18px;">
-                                ✔ Mentorship from <span style="font-size: 20px;color: #ff6b6b;"><b>Sarah, Best Travel Business Coach 2024</b></span>
+                            <li style="color: #000000 !important; font-size: 16px;">
+                                ✔<span style="font-size: 17px"><b> Mentorship from</b></span> <span style="font-size: 20px;color: #ff6b6b;"><b>Sarah, Best Travel Business Coach 2024</b></span>
                             </li>
-                            <li style="color: #000000 !important; font-size: 18px;">
-                                ✔ Exclusive high-commission travel partnerships – Earn more on bookings
+                            <li style="color: #000000 !important; font-size: 16px;">
+                                ✔<span style="font-size: 17px"><b> Exclusive high-commission travel partnerships</b></span> – Earn more on bookings
                             </li>
-                            <li style="color: #000000 !important; font-size: 18px;">
-                                ✔ A supportive community of like-minded entrepreneurs
+                            <li style="color: #000000 !important; font-size: 16px;">
+                                ✔<span style="font-size: 17px"><b> A supportive community of like</b></span>-minded entrepreneurs
                             </li>
                         </ul>
 
@@ -758,6 +848,11 @@
                         </div>
                        
                     </div>
+                    <div class="start_heding">
+                        <h4>Start today and <span> book </span> your <span> first trip</span> in just weeks!
+                                                        </h4>
+                    </div>
+                    
                 </div>
                 <div class="col-lg-6">
                     <img src="assets/images/about2.jpg" alt="" style="    height: 400px!important;" class="img-fluid radius-image">
@@ -814,7 +909,7 @@
                 </div>
                 <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
                     <div class="title-main">
-                        <h4>Join over <b><i>1,500 women</i></b>  who have already launched their <b><i>businesses</i></b>! 
+                        <h4>Join over <span>1,500 women</span>   who have already launched their <span>businesses</span>! 
     </h4>
                         
                     </div>
