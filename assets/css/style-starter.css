@@ -89,6 +89,7 @@ h1,
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
+  font-family: ;
 }
 
 h1,
@@ -7867,6 +7868,7 @@ fieldset:disabled .btn {
 
 .mt-2 {
   margin-top: 0.5rem !important;
+  font-family: Lato Medium;
 }
 
 .mt-3 {
@@ -11916,10 +11918,10 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   color: var(--heading-color);
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 p {
@@ -19103,8 +19105,8 @@ header.nav-fixed {
 
 /* button style */
 .btn-style {
-  padding: 10px 28px 11px;
-  font-size: 20px;
+  padding: 10px 40px 11px;
+  font-size: 23px;
   color: #fff;
   border-radius: var(--border-radius-full);
   font-weight: bold;
@@ -20161,6 +20163,8 @@ button.owl-next {
   font-size: 16px;
   line-height: 26px;
   margin-bottom: 10px;
+   margin-top: 10px;
+
   display: block;
   color: var(--heading-color);
 }
