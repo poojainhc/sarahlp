@@ -19162,8 +19162,11 @@ a.btn-style i {
 
 /* title style */
 h3.title-style {
-  font-size: 38px;
-  line-height: 46px;
+  /*font-size: 38px;
+  line-height: 46px;*/
+     font-size: 31px;
+                line-height: 35px;
+                font-family: Lato Regular;
 }
 
 .title-main p {
@@ -19173,13 +19176,58 @@ h3.title-style {
 }
 
 @media (max-width:991px) {
+
+  .info-banne-m {
+    display: flex;
+    gap: 20px;
+    text-align: center !important;
+
+  .btn-style {
+    padding: 10px 40px 11px;
+    font-size: 42px;
+    color: #fff;
+    border-radius: var(--border-radius-full);
+    font-weight: bold;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    background: var(--primary-color);
+    transition: all 1.8s ease-in-out;
+}
   h3.title-style {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 52px;
+    line-height: 70px;
   }
+  .about_info h4 {
+    color: orangered;
+    text-align: center;
+    margin: 30px;
+    font-size: 40px;
+}
+
+.mtm{
+
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.custom-list li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 2.3rem !important;
+    line-height: 1 !important;
+}
+.mtm-2{
+  font-size: 45;
+  margin-top: 0.5rem;
+    font-family: Lato Medium;
+}
+}
 }
 
 @media (max-width:568px) {
+  
+
   h3.title-style {
     font-size: 32px;
     line-height: 40px;
